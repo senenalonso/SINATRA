@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LOGIN APP</title>
+</head>
+<body>
+<h1><%= session[:message] %></h1>
+<h2>Introduce usuario y contraseña:</h2>
+<form name="login" action="log_in" method="post">
+  <label for="user">Usuario</label>
+   <input type="text" name="user" placeholder="Usuario" required>
+  <label for="password">Password</label>
+   <input type="password" name="password" placeholder="Password" required>
+   
+   <input type="submit" value="Login">
+</form>
+<h2>Si no dispones de usuario empieza el proceso de registro pinchando <a href="/register">aquí</a></h2>
+</body>
+</html>

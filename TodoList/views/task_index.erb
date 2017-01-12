@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TODO LIST</title>
+</head>
+<body>
+<h1>Lista de tareas de: <%= session[:owner] %></h1>
+
+<table>
+<% @tasks.each do |task| %>
+  <tr>
+    <td><%= task.id %></td>
+    <td><%= task.content %></td>
+
+    <%if task.completed?%>    
+    <td><a href="/uncomplete_task/<%= task.id %>"><img src="/img/uncomplete.png" width="20" height="20" /></a></td>
+    <%else%>
+    <td><a href="/complete_task/<%= task.id %>"><img src="/img/complete.jpg" width="20" height="20" /></a></td>
+    <%end%>
+    <td><a href="/delete_task/<%= task.id %>"><img src="/img/delete.jpg" width="20" height="20" /></a></td>
+  </tr>
+<% end %>
+</table>
+<p><a href="/new_task">Añadir tarea</a></p>
+</body>
+</html>

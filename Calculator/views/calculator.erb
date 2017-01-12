@@ -1,0 +1,19 @@
+<!-- views/calculator.erb -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Online Calculator</title>
+</head>
+<body>
+  <h1>Online Calculator</h1>
+	<form action="/calculate" method="POST">
+  	<input type="number" name="first_number" placeholder="1st number"> <===>
+  	<input type="number" name="second_number" placeholder="2nd number">
+
+  	<button type="submit" name="operation" value="addition">ADD</button>
+  	<button type="submit" name="operation" value="subtraction">SUBSTRACT</button>
+  	<button type="submit" name="operation" value="multiplication">MULTIPLY</button>
+  	<button type="submit" name="operation" value="division">DIVIDE</button>
+	</form>
+</body>
+</html>
